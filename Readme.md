@@ -10,4 +10,4 @@
 
 | Prueba   | Columna   |
 | -----    | -----     |
-|tablita      | iraira    |
+|tablita   | iraira    |
