@@ -9,7 +9,7 @@
 ---
 
 Este curso veremos las siguientes **tecnologías** y **lenguajes de programación**:
-- [Docker](https://es.wikipedia.org/wiki/Docker_(software)){:target="_blank"}
--  [Git](https://es.wikipedia.org/wiki/Git){:target="_blank"}
-- [Java](https://es.wikipedia.org/wiki/Java_(lenguaje_de_programaci%C3%B3n)){:target="_blank"}
-- [PHP](https://es.wikipedia.org/wiki/PHP){:target="_blank"}
+- [Docker](https://es.wikipedia.org/wiki/Docker_(software))
+-  [Git](https://es.wikipedia.org/wiki/Git)
+- [Java](https://es.wikipedia.org/wiki/Java_(lenguaje_de_programaci%C3%B3n))
+- [PHP](https://es.wikipedia.org/wiki/PHP)
