@@ -8,7 +8,7 @@
 
 ---
 
-Este curso veremos las siguientes tecnologías y lenguajes de programación:
+Este curso veremos las siguientes **tecnologías** y **lenguajes de programación**:
 - Docker
 -  Git
 - Java
