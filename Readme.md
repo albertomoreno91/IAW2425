@@ -9,5 +9,5 @@
 ![DaSuisa](https://media1.tenor.com/m/rFs7M3-8JTMAAAAd/da-suisa.gif "Laisy")
 
 | Prueba   | Columna   |
-|----      | -----     |
-|ioio      | iraira    |
+| -----    | -----     |
+|tablita      | iraira    |
