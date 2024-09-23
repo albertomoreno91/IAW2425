@@ -7,6 +7,7 @@
 > Mapachiona esta asignatura.  —Mapache anónimo
 
 ![Druida](https://media.tenor.com/CgGUXc-LDc4AAAAM/hacker-pc.gif "Hacking")
+![Gato](https://media0.giphy.com/media/o0vwzuFwCGAFO/giphy.gif?cid=6c09b952b3b1dl34j6c7g0qplenzp7g6wryr1j9x962vamx7&ep=v1_gifs_search&rid=giphy.gif&ct=g "Gatín")
 
 | Prueba   | Columna   |
 | -----    | -----     |
