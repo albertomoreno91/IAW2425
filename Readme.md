@@ -6,7 +6,7 @@
 
 > Mapachiona esta asignatura.  —Mapache anónimo
 
-![DaSuisa](https://media1.tenor.com/m/rFs7M3-8JTMAAAAd/da-suisa.gif "Laisy")
+![Druida](https://media.tenor.com/CgGUXc-LDc4AAAAM/hacker-pc.gif "Hacking")
 
 | Prueba   | Columna   |
 | -----    | -----     |
