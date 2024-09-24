@@ -5,15 +5,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de presentación</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <style>
+        .under {
+            font-family: "Roboto", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 30px;
+        }
+
+        .under2 {
+            font-family: "Oswald", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 25px;
+            margin: 0px;
+            position: relative;
+            top: -30px;
+        }
+
+        main {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
         body {
-            background-color: aquamarine;
+            background-image: linear-gradient(rgb(243, 147, 79), rgb(242, 208, 176));
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        #foto {
+            height: 300px;
+            width: 300px;
+            background-image: url(https://media1.tenor.com/m/ZAMoMuQgf9UAAAAd/mapache-pedro.gif);
+            background-size: cover;
+            border-radius: 100%;
         }
     </style>
 </head>
 
 <body>
-    <h1>Ola</h1>
+    <main>
+        <div id="foto"></div>
+        <p class="under">Hola que tal, soy el chico de las poesías</p>
+        <p class="under2">Tu fiel admirador</p>
+    </main>
 </body>
 
 </html>
