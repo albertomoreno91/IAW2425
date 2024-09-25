@@ -11,6 +11,13 @@
         href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <style>
+        #nombre {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            font-weight: bolder;
+            font-size: 20px;
+        }
+
         .under {
             font-family: "Roboto", sans-serif;
             font-weight: 700;
@@ -36,9 +43,6 @@
             font-weight: 700;
             font-style: normal;
             font-size: 30px;
-            margin: 0px;
-            position: relative;
-            top: -30px;
         }
 
         main {
@@ -62,16 +66,31 @@
             background-size: cover;
             border-radius: 100%;
         }
+
+        #redes {
+            display: flex;
+        }
     </style>
 </head>
 
 <body>
     <main>
+        <div>
+            <p id="nombre">Alberto Moreno Carrero<br>
+                2º ASIR</p>
+        </div>
         <div id="foto"></div>
-        <p class="under">Hola que tal, soy el chico de las poesías</p>
-        <p class="under2">Tu fiel admirador</p>
-        <p class="under3">No llames a la policía</p>
-        <p class="under2">Por favor</p>
+        <p class="under">Bienvenidos a</p>
+        <p class="under2">mi página personal</p>
+        <p class="under3">Redes sociales:</p>
+        <div id="redes">
+            <div><a href="https://i.pinimg.com/originals/ea/8b/13/ea8b137fbc46bea2f12cc9087e57053d.gif"
+                    target="_blank"><img src="images/instagram.png" alt="instagram" height="auto" width="50px"
+                        style="padding: 10px;"></a></div>
+            <div><a href="https://pbs.twimg.com/media/FeuW4N5XEAAPPg4.jpg" target="_blank"><img
+                        src="images/facebook.png" alt="facebook" height="auto" width="50px" style="padding: 10px;"></a>
+            </div>
+        </div>
     </main>
 </body>
 
