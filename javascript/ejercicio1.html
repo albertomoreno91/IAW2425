@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ejercicio 1</title>
     <style>
         .roja {
             margin: 20px;
@@ -32,13 +32,34 @@
             background-color: blue;
             border-radius: 100%;
         }
+
+        button {
+            width: 100px;
+            height: 30px;
+            margin: 65px;
+        }
+
+        .botonera {
+            display: block;
+            clear: both;
+        }
     </style>
 </head>
 
 <body>
-<div class="roja"></div>
-<div class="verde"></div>
-<div class="azul"></div>
+    <div class="roja"></div>
+    <div class="verde"></div>
+    <div class="azul"></div>
+    <div class="botonera">
+        <button onclick="ocultar('roja')">Ocultar</button>
+        <button onclick="ocultar('verde')">Ocultar</button>
+        <button onclick="ocultar('azul')">Ocultar</button>
+    </div>
+    <script>
+        function ocultar(elemento) {
+            document.getElementsByClassName(elemento)[0].style.visibility = 'hidden'
+        }
+    </script>
 </body>
 
 </html>

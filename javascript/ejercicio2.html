@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+
+<body>
+    <input type="number" id="cantidad">
+    <button onclick="conversoreuros()">Convertir a Euros</button>
+    <button onclick="conversordolares()">Convertir a Dólares</button>
+    <p id="resultado"></p>
+    <script>
+        function conversoreuros() {
+            let numero = parseFloat(document.getElementById('cantidad').value);
+            document.getElementById('resultado').innerHTML = (numero * 0.92) + ' euros';
+        }
+    </script>
+
+</body>
+
+</html>
