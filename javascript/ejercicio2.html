@@ -15,7 +15,22 @@
     <script>
         function conversoreuros() {
             let numero = parseFloat(document.getElementById('cantidad').value);
-            document.getElementById('resultado').innerHTML = (numero * 0.92) + ' euros';
+            if (isNaN(numero)) {
+                document.getElementById('resultado').innerHTML = 'Por favor, introduzca un número'
+            }
+            else {
+                document.getElementById('resultado').innerHTML = (numero * 0.92).toFixed(2) + ' euros';
+            }
+        }
+
+        function conversordolares() {
+            let numero = parseFloat(document.getElementById('cantidad').value);
+            if (isNaN(numero)) {
+                document.getElementById('resultado').innerHTML = 'Por favor, introduzca un número'
+            }
+            else {
+                document.getElementById('resultado').innerHTML = (numero * 1.09).toFixed(2) + ' dólares';
+            }
         }
     </script>
 
