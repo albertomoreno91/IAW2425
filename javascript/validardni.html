@@ -12,11 +12,17 @@
     <button type="button" onclick="validar()">Validar</button>
     <p id="respuesta"></p>
     <script>
+        let letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E']
         function validar() {
             let input_usuario = document.getElementById('input').value;
             let numero_dni = parseInt(input_usuario.substr(0, 8));
             let letra_dni = input_usuario.substr(8, 9);
-            document.getElementById('respuesta').innerHTML = letra_dni;
+            let letra_resto = numero_dni % 23
+            let letra_real = letras[letra_resto]
+            if () {
+        
+            }
+
         }
     </script>
 </body>
