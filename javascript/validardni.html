@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar DNI</title>
+</head>
+
+<body>
+    <input type="text" id="input">
+    <button type="button" onclick="validar()">Validar</button>
+    <p id="respuesta"></p>
+    <script>
+        function validar() {
+            let input_usuario = document.getElementById('input').value;
+            let numero_dni = parseInt(input_usuario.substr(0, 8));
+            let letra_dni = input_usuario.substr(8, 9);
+            document.getElementById('respuesta').innerHTML = letra_dni;
+        }
+    </script>
+</body>
+
+</html>
