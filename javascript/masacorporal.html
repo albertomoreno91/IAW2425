@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Masa Corporal</title>
 </head>
+
 <body>
-    
+    <h1>Índice de masa corporal</h1>
+    <p>Introduzca su peso en Kg: <input type="number" id="peso"></p>
+    <p>Introduzca su altura en metros: <input type="number" id="altura"></p>
+    <p><button onclick="calcular()">Calcular</button></p>
+    <p id="resultado"></p>
+
+    <script>
+        function calcular() {
+            let peso = parseFloat(document.getElementById('peso').value);
+            let altura = parseFloat(document.getElementById('altura').value);
+            let masa_corporal = peso / Math.pow(altura, 2)
+            if (isNaN(masa_corporal))
+                document.getElementById('resultado').innerText = 'Introduzca números válidos'
+            else
+                document.getElementById('resultado').innerText = 'Tu masa corporal es de ' + masa_corporal
+        }
+    </script>
+
 </body>
+
 </html>
