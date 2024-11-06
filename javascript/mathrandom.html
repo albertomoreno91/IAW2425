@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivina el número</title>
+</head>
+
+<body>
+    <h1>Adivina el número</h1>
+    <h2>He pensado un número aleatorio entre el 0 y el 5. Intenta adivinarlo</h2>
+    <input type="number" id="num_usuario">
+    <button onclick="comprobar()">Comprobar</button>
+    <p id="resultado"></p>
+    <script>
+        let num_random = Math.floor(Math.random() * 6);
+        let caja_resultado = document.getElementById('resultado')
+        function comprobar() {
+            let num_usuario = parseFloat(document.getElementById('num_usuario').value);
+            if (isNaN(num_usuario))
+                caja_resultado.innerHTML = 'Introduzca un número válido'
+            else {
+                if (num_usuario == num_random) {
+                    caja_resultado.innerText = 'Enhorabuena, has acertado'
+                }
+                else {
+                    caja_resultado.innerText = 'Mala suerte, prueba otro número'
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
