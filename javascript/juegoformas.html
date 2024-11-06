@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego de Tiempo de Reacción</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+    #shape {
+      position: absolute;
+      cursor: pointer;
+    }
+    #time {
+      position: fixed;
+      top: 10px;
+      font-size: 1.5em;
+    }
+  </style>
+</head>
+<body>
+
+<div id="time">Tiempo de Reacción: <span id="reactionTime">0</span> ms</div>
+<div id="shape"></div>
+
+<script>
+  const shape = document.getElementById("shape");
+  const reactionTimeDisplay = document.getElementById("reactionTime");
+
+  let startTime, endTime;
+
+  function showShape() {
+    // Tiempo de espera aleatorio entre 0 y 2 segundos
+    setTimeout(() => {
+      const size = Math.floor(Math.random() * 100) + 50;
+      shape.style.width = size + "px";
+      shape.style.height = size + "px";
+      
+      // Posiciones aleatorias en la pantalla
+      shape.style.top = Math.random() * 80 + "vh";
+      shape.style.left = Math.random() * 80 + "vw";
+      
+      // Color aleatorio
+      shape.style.backgroundColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+      
+      // Forma aleatoria
+      shape.style.borderRadius = Math.random() > 0.5 ? "50%" : "0";
+      
+      // Mostrar la forma
+      shape.style.display = "block";
+      
+      // Iniciar tiempo de reacción
+      startTime = Date.now();
+    }, Math.random() * 2000);
+  }
+
+  shape.addEventListener("click", () => {
+    endTime = Date.now();
+    const reactionTime = endTime - startTime;
+    reactionTimeDisplay.textContent = reactionTime;
+    shape.style.display = "none";
+    showShape();
+  });
+
+  // Iniciar el juego
+  showShape();
+</script>
+
+</body>
+</html>
