@@ -65,7 +65,7 @@
             document.getElementById("patito").style.display = "block";
         }
         function desapareceMensaje() {
-                document.getElementById('mensaje').innerText = ""; /* Hacemos que no ponga nada en el mensaje */
+            document.getElementById('mensaje').innerText = ""; /* Hacemos que no ponga nada en el mensaje */
         }
         function aparecerpatitoDespuesRetraso() {
             setTimeout(aparecerpatito, Math.random() * 2000);
@@ -79,15 +79,15 @@
 
         document.getElementById("campoJuego").onclick = function (e) {
             if (e.target != document.getElementById("patito")) {
-                puntos = puntos - 1;
+                puntos -= 1;
                 document.getElementById("mensaje").innerHTML = "¡Fallaste!";
 
             }
             else {
-                puntos = puntos + 1;
+                puntos += 1;
                 document.getElementById("mensaje").innerHTML = "¡Acierto!";
             }
-                document.getElementById('patito').style.display = "none";
+            document.getElementById('patito').style.display = "none";
             document.getElementById("puntos").innerHTML = puntos; /* Establecemos los puntos */
             aparecerpatitoDespuesRetraso();
             desapareceMensajeDespuesRetraso();
