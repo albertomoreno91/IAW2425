@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <p id="parrafo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab velit assumenda possimus inventore
+        voluptate.
+        Facilis porro dolore iste, provident vitae esse sint molestiae. Explicabo ipsa ullam accusamus laborum velit
+        modi!</p>
+    <button id="boton">Ocultar</button>
+    <button id="boton2">Mostrar</button>
+    <button id="boton3">Alternar</button>
+    <script>
+        $(document).ready(function () {
+            $("#boton").click(function () {
+                $("#parrafo").hide();
+            });
+            $("#boton2").click(function () {
+                $("#parrafo").show();
+            });
+            $("#boton3").click(function () {
+                $("#parrafo").fadeToggle();
+            });
+        });
+    </script>
+
+</body>
+
+</html>
