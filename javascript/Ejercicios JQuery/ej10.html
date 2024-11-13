@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,22 +10,32 @@
         body {
             background-color: antiquewhite;
         }
+
         table {
             border: 1px solid black;
         }
+
         img {
             border-radius: 10px;
         }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
+
 <body>
     <h1>El método val() de jQuery</h1>
     <input type="text" value="">
     <button>Ver val()</button>
     <script>
-       /* Incluye aquí el código jQuery */
+        /* Incluye aquí el código jQuery */
+        $(document).ready(function () {
+            $("button").click(function () {
+                let valor = $("input").val();
+                alert('Valor: ' + valor);
+            })            
+        })
         
     </script>
 </body>
+
 </html>
