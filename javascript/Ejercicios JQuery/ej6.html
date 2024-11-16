@@ -19,6 +19,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script>
         /* Código jQuery */
+        $(document).ready(function () {
+            $("#encabezados").text($("h1").length)
+            $("#parrafos").text($("p").length)
+            $("#imagenes").text($("img").length)
+            $("#enlaces").text($("a").length)
+        });
     </script>
 </head>
 <body>
