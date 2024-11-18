@@ -10,17 +10,27 @@
 
 <body>
     <button onclick="ajax()">Obtener</button>
+    <button onclick="load()">Cargar</button>
+    <div id="div"></div>
     <script>
+        $(document).ajaxError(function () {
+            alert("Sa roto algo, cabesa");
+        });
         function ajax() {
-            $(document).ready(function () {   
-                $.get("https://fakestoreapi.com/prolkjlkjducts", function (data, status) {
+            $(document).ready(function () {
+                $.get("https://fakestoreapi.com/products", function (data, status) {
                     console.log(status)
                     console.log(data)
                     console.log(data.length)
+                    if (status == 'success')
+                        alert('Ha ido flama, cabesa')
                 })
-                $(document).ajaxError(function () {
-                    alert("Sa roto algo, cabesa");
-                });
+            });
+        }
+
+        function load() {
+            $(document).ready(function () {
+                $("#div").load("ej1.html p")
             });
         }
 
