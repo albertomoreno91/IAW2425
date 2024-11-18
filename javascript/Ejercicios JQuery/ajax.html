@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <button onclick="ajax()">Obtener</button>
+    <script>
+        function ajax() {
+            $(document).ready(function () {   
+                $.get("https://fakestoreapi.com/prolkjlkjducts", function (data, status) {
+                    console.log(status)
+                    console.log(data)
+                    console.log(data.length)
+                })
+                $(document).ajaxError(function () {
+                    alert("Sa roto algo, cabesa");
+                });
+            });
+        }
+
+    </script>
+</body>
+
+</html>
