@@ -61,6 +61,7 @@
             margin-left: 2%;
             margin-top: 1%;
         }
+
         button:hover {
             background-color: #545662;
             opacity: 0.8;
@@ -84,7 +85,35 @@
         </div>
     </div>
     <script>
-        
+        $(document).ajaxError(function () {
+            alert("Ha ocurrido un error de AJAX")
+        })
+        $(document).ready(function () {
+            $("#btn-producto").click(function () {
+                $("#resultados").empty()
+                let valor_caja = $("#codProducto").val()
+                $.get("https://fakestoreapi.com/products/" + valor_caja, function (data, status) {
+                    console.log(data)
+                    $("#resultados").append("<img src='" + data.image + "'>" + "<br><br>")
+                    $("#resultados").append("Titulo: " + data.title + "<br><br>")
+                    $("#resultados").append("Descripción: " + data.description + "<br><br>")
+                    $("#resultados").append("Precio: " + data.price + "<br><br>")
+                })
+            })
+            $("#btn-todos").click(function () {
+                $("#resultados").empty()
+                $.get("https://fakestoreapi.com/products/", function (data, status) {
+                    console.log(data)
+                    for (i=0; i < data.length; i++){
+                        
+                    }
+                    $("#resultados").append("<img src='" + data.image + "'>" + "<br><br>")
+                    $("#resultados").append("Titulo: " + data.title + "<br><br>")
+                    $("#resultados").append("Descripción: " + data.description + "<br><br>")
+                    $("#resultados").append("Precio: " + data.price + "<br><br>")
+                })
+            })
+        });
     </script>
 </body>
 
