@@ -87,6 +87,7 @@
     <script>
         $(document).ajaxError(function () {
             alert("Ha ocurrido un error de AJAX")
+            $("#resultados").html("<p style = 'color:red'>Error de AJAX</p>")
         })
         $(document).ready(function () {
             $("#btn-producto").click(function () {
