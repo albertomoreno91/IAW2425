@@ -94,7 +94,7 @@
                 let valor_caja = $("#codProducto").val()
                 $.get("https://fakestoreapi.com/products/" + valor_caja, function (data, status) {
                     console.log(data)
-                    $("#resultados").append("<img src='" + data.image + "'>" + "<br><br>")
+                    $("#resultados").append("<img src='" + data.image + "' width=200px>" + "<br><br>")
                     $("#resultados").append("Titulo: " + data.title + "<br><br>")
                     $("#resultados").append("Descripción: " + data.description + "<br><br>")
                     $("#resultados").append("Precio: " + data.price + "<br><br>")
@@ -104,13 +104,12 @@
                 $("#resultados").empty()
                 $.get("https://fakestoreapi.com/products/", function (data, status) {
                     console.log(data)
-                    for (i=0; i < data.length; i++){
-                        
+                    for (i = 0; i < data.length; i++) {
+                        $("#resultados").append("<img src='" + data[i].image + "' width=200px>" + "<br><br>")
+                        $("#resultados").append("Titulo: " + data[i].title + "<br><br>")
+                        $("#resultados").append("Descripción: " + data[i].description + "<br><br>")
+                        $("#resultados").append("Precio: " + data[i].price + "<br><br>")
                     }
-                    $("#resultados").append("<img src='" + data.image + "'>" + "<br><br>")
-                    $("#resultados").append("Titulo: " + data.title + "<br><br>")
-                    $("#resultados").append("Descripción: " + data.description + "<br><br>")
-                    $("#resultados").append("Precio: " + data.price + "<br><br>")
                 })
             })
         });
