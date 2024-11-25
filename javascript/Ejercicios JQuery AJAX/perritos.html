@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perritos</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <button id="boton">Pulsa para generar un perrito</button>
+    <div>
+        <img src="" id="imagen" height="450px" style="margin: 20px; border: solid black 2px; visibility:hidden;">
+    </div>
+    <script>
+        $(document).ajaxError(function () {
+            alert("Error de AJAX")
+        })
+        $(document).ready(function () {
+            $("#boton").click(function () {
+                $.get("https://dog.ceo/api/breeds/image/random", function (data, status) {
+                    console.log(data)
+                    $("#imagen").css("visibility", "visible").attr("src",data.message)
+                })
+            })
+        });
+    </script>
+</body>
+
+</html>
