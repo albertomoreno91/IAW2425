@@ -11,7 +11,8 @@
 <body>
     <button id="boton">Pulsa para generar un perrito</button>
     <div>
-        <img src="" id="imagen" height="450px" style="margin: 20px; border: solid black 2px; visibility:hidden;">
+        <img src="" id="imagen" height="450px"
+            style="margin: 20px; border: solid moccasin 10px; outline: dotted black 2px; outline-offset: 10px; visibility: hidden;">
     </div>
     <script>
         $(document).ajaxError(function () {
@@ -21,7 +22,7 @@
             $("#boton").click(function () {
                 $.get("https://dog.ceo/api/breeds/image/random", function (data, status) {
                     console.log(data)
-                    $("#imagen").css("visibility", "visible").attr("src",data.message)
+                    $("#imagen").css("visibility", "visible").attr("src", data.message)
                 })
             })
         });
