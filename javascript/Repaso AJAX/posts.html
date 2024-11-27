@@ -13,8 +13,12 @@
     <button id="boton">Pulsa para ver mensajes</button>
     <ul id="lista"></ul>
     <script>
+        $(document).ajaxError(function(){
+            alert("Fallo fallito falloso")
+        })
         $(document).ready(function () {
             $("#boton").click(function () {
+                $("#lista").empty()
                 $.get("https://jsonplaceholder.typicode.com/posts", function (data, status) {
                     console.log(data)
                     for (i = 0; i < data.length; i++) {
