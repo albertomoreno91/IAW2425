@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <button id="boton">Pulsa para ver mensajes</button>
+    <ul id="lista"></ul>
+    <script>
+        $(document).ready(function () {
+            $("#boton").click(function () {
+                $.get("https://jsonplaceholder.typicode.com/posts", function (data, status) {
+                    console.log(data)
+                    for (i = 0; i < data.length; i++) {
+                        $("#lista").append("<li>" + data[i].body + "</li>")
+                    }
+                })
+            })
+        });
+    </script>
+</body>
+
+</html>
