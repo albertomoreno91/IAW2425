@@ -1,5 +1,4 @@
 <?php
-echo $_SERVER['HTTP_USER_AGENT'] . "\n\n";
-$browser = get_browser(null, true);
-print_r($browser);
+$user_agent = $_SERVER['HTTP_USER_AGENT'];
+echo "Estás utilizando el siguiente navegador: " . $user_agent;
 ?>
