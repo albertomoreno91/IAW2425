@@ -1,4 +1,4 @@
-<?php $random = rand(128000, 129000); ?>
+<?php $random = rand(128512, 128586); ?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -8,6 +8,6 @@
     <title>Emoji aleatorio</title>
 </head>
 <body>
-    <p>&#<?php echo $random ?></p>
+    <p style = 'font-size:60px'>&#<?php echo $random ?></p>
 </body>
 </html>
