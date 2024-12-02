@@ -3,7 +3,7 @@ $numero = 1;
 $total = 10;
 echo "<table border='1'>";
 while ($numero <= $total){
-    echo "<tr><td>$numero</td></tr>\n";
+    echo "<tr><td>$numero</td></tr>";
     $numero += 1;
 }
 ?>
