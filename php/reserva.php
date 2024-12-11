@@ -38,7 +38,7 @@
     </form>
     
     <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $valornombre = isset($_POST["nombre"]) ? htmlspecialchars($_POST["nombre"]) : "";
     $valorapellidos = isset($_POST["apellidos"]) ? htmlspecialchars($_POST["apellidos"]) : "";
     $valordni = isset($_POST["dni"]) ? htmlspecialchars($_POST["dni"]) : "";
