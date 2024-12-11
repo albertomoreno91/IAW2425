@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo energía cinética</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>Cálculo de energía cinética</h1>
+    <p>Introduce la masa del objeto en Kg: </p>
+    <input type="number" min="0" id="peso">
+    <p>Introduce la velocidad del objeto en m/s: </p>
+    <input type="number" min="0" id="velocidad">
+    <p><input type="button" value="Calcular" id="boton"></p>
+    <p id="resultado"></p>
+
+    <script>
+        $(document).ready(function () {
+            $("#boton").click(function () {
+                let peso_objeto = $("#peso").val();
+                let vel_objeto = $("#velocidad").val();
+                if (peso_objeto == "" || vel_objeto == "" || peso_objeto < 0 || vel_objeto < 0) {
+                    $("#resultado").text("Introduzca valores numéricos positivos válidos");
+                }
+                else {
+                    let ener_cinetica = 0.5 * peso_objeto * (vel_objeto ** 2);
+                    if (ener_cinetica < 10) {
+                        $("#resultado").text("La energía cinética es baja: " + ener_cinetica.toFixed(2) + " Joules")
+                    }
+                    if (ener_cinetica >= 10 && ener_cinetica < 100){
+                        $("#resultado").text("La energía cinética es moderada: " + ener_cinetica.toFixed(2) + " Joules")
+                    }
+                    if (ener_cinetica >=100) {
+                        $("#resultado").text("La energía cinética es alta: " + ener_cinetica.toFixed(2) + " Joules")
+                    }
+                }
+
+            })
+        });
+    </script>
+</body>
+
+</html>

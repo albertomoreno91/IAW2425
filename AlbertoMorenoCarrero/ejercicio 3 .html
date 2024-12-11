@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API de Giphy</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>Buscador de gifs</h1>
+    <input type="text" id="busqueda">
+    <button id="boton">Buscar</button>
+    <p id="resultado"></p>
+
+    <script>
+        $(document).ajaxError(function () {
+            alert("Error de AJAX")
+        })
+        $(document).ready(function () {
+            $("#boton").click(function () {
+                $("#resultado").empty();
+                let valor_busqueda = $("#busqueda").val();
+                $.get("https://api.giphy.com/v1/gifs/search?api_key=AtkFdcZWh53zQNUchZSEUKQIJ4zO04id&q=" + valor_busqueda, function (datos, estado) {
+                    console.log(datos)
+                    for (i = 0; i < 10; i++) {
+                        $("#resultado").append("<img src='" + datos.data[i].images.downsized.url + "'>")
+                    }
+                })
+            })
+        });
+    </script>
+</body>
+
+</html>
