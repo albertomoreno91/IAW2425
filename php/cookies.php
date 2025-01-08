@@ -1,3 +1,6 @@
+<?php
+    setcookie("nombre", "Tekito Lakaka");
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,8 +10,5 @@
 </head>
 <body>
     <h1>Prueba de cookies</h1>
-    <?php
-    setcookie("nombre", "Tekito Lakaka");
-    ?>
 </body>
 </html>
