@@ -1,5 +1,7 @@
 <?php
     setcookie("nombre", "Tekito Lakaka");
+    setcookie("color", "Colorao");
+    setcookie("equipo", "Racing de Miano");
 ?>
 <!DOCTYPE html>
 <html lang="es">
