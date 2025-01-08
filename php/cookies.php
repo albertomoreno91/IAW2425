@@ -6,6 +6,9 @@
     <title>Cookies</title>
 </head>
 <body>
-    
+    <h1>Prueba de cookies</h1>
+    <?php
+    setcookie("nombre", "Tekito Lakaka");
+    ?>
 </body>
 </html>
