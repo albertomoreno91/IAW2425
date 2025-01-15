@@ -10,7 +10,7 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
-
+//update
 $sql = "UPDATE USUARIOS SET apellidos = 'Padial Naranjo' WHERE nombre = 'Samuel'";
 
 if (mysqli_query($conn, $sql)) {
